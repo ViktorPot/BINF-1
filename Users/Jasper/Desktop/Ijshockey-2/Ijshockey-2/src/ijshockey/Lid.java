@@ -1,5 +1,7 @@
 package ijshockey;
 
+import java.time.Instant;
+import java.util.Calendar;
 import java.util.Date;
 
 /*
@@ -13,20 +15,36 @@ import java.util.Date;
  */
 public class Lid {
 
-    private String LidId;
+    // private String LidId; // PK of nummer
     private String voornaam;
     private String achternaam;
     private Date geboortedatum;
+    private int Leeftijd;
+//    private Seizoen seizoen;
+//    private int year = this.seizoen.getJaar();
 
+    public Lid(String voornaam, String achternaam, Date geboortedatum) {
+
+        this.voornaam = voornaam;
+        this.achternaam = achternaam;
+        this.geboortedatum = geboortedatum;
+
+    }
+
+//    public int setLeeftijd(Date geboortedatum) {
+//        return year - geboortedatum.getYear();
+//    }
+  //  private void duplicateCheck(String voornaam, String achternaam) {
+
+    //}
 //getters en setters
-    public String getLidId() {
-        return LidId;
-    }
-
-    public void setLidId(String LidId) {
-        this.LidId = LidId;
-    }
-
+//    public String getLidId() {
+//        return this.LidId;
+//    }
+//
+//    public void setLidId(String LidId) {
+//        this.LidId = LidId;
+//    }
     public String getVoornaam() {
         return voornaam;
     }
@@ -39,7 +57,7 @@ public class Lid {
         return achternaam;
     }
 
-    public void setAchternaam(String achternaam) {    
+    public void setAchternaam(String achternaam) {
         this.achternaam = achternaam;
     }
 
